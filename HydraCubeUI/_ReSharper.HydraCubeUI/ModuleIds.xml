@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="7A9D0F6C-A011-4733-B17B-86F1B4E7936E" ModuleId="HydraCubeUI" />
+  <Module PersistentId="AC770863-D966-4864-97F3-2ABA08910B14" ModuleId="NETMFx.LedCube" />
+  <Module PersistentId="72B860A8-0806-4132-B5F9-DE25E8168B7E" ModuleId="HydraNative" />
+  <Module PersistentId="9EC91F14-F59F-465D-A53F-ACB6697D4985" ModuleId="NETMFx.LedCube3" />
+</Modules>

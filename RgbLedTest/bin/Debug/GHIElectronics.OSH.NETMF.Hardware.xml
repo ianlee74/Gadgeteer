@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHIElectronics.OSH.NETMF.Hardware</name>
+    </assembly>
+    <members>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.Hydra">
+            <summary>
+            Exposes Hydra specific functionality.
+            </summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin">
+            <summary>
+            Provides Pin definitions for ChipworkX.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.GPIO_NONE">
+            <summary>A value indicating that no GPIO pin is specified.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PA31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PB31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PC31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.Hydra.Pin.PD31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.PWM">
+            <summary>
+            Provides PWM functionality.
+            </summary>
+            <remarks>
+            Please refer to your platform documentation for the available PWM pins.<br/>
+            <br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Dispose">
+            <summary>
+            Disposes the pin and marks it as available again.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Finalize">
+            <exclude/>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.#ctor(GHIElectronics.OSH.NETMF.Hardware.PWM.Pin)">
+            <summary>
+            Creates a new PWM pin.
+            </summary>
+            <param name="pin">Needed pin.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Set(System.Int32,System.Byte)">
+            <summary>
+            Sets the PWM's frequency and duty cycle.
+            </summary>
+            <param name="freq_Hz">Required frequency in Hertz.</param>
+            <param name="dutyCycle">Duty cycle percentage. 0 to 100 inclusive.</param>
+            <remarks>
+            Setting the frequency to 0 would stop the PWM.<br/>
+            0% and 100% are valid values for the duty cycle.
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Set(System.Boolean)">
+            <summary>
+            Sets the PWM pin as high or low.
+            </summary>
+            <param name="pinState"><c>true</c> if high.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.SetPulse(System.UInt32,System.UInt32)">
+            <summary>
+            Sets the PWM using the period time and high time.
+            </summary>
+            <param name="period_nanosecond">Period of the signal in nano seconds.</param>
+            <param name="highTime_nanosecond">High time of the signal in nano seconds.</param>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin">
+            <summary>
+            Lists the PWM pins.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM0">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM1">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM2">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM3">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM4">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM5">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM6">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM7">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM8">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM9">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM10">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM11">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM12">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM13">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM14">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM15">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.AnalogIn">
+            <summary>
+            Provides the ability to read an analog input pin.
+            </summary>
+            <remarks>
+            Please refer to your platform documentation for the available analog pins. The analog pin is initialized with the default platform resolution.<br/>
+            <br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Dispose">
+            <summary>
+            Disposes the pin and marks it as available again.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Finalize">
+            <exclude/>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.#ctor(GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin)">
+            <summary>
+            Creates a new analog pin.
+            </summary>
+            <param name="ain">Needed analog pin.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.SetLinearScale(System.Int32,System.Int32)">
+            <summary>
+            Scales the analog value when reading automatically into a specific range.
+            </summary>
+            <param name="minValue">Min value.</param>
+            <param name="maxValue">Max value.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Read">
+            <summary>
+            Reads the current analog value.
+            </summary>
+            <returns>Current analog value.</returns>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin">
+            <summary>
+            Lists the analog input pins.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain0">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain1">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain2">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain3">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain4">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain5">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain6">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain7">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain8">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain9">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain10">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain11">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain12">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain13">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain14">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain15">
+            <summary>Analog input pin.</summary>
+        </member>
+    </members>
+</doc>

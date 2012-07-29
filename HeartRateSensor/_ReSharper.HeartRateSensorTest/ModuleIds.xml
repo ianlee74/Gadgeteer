@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E" ModuleId="HeartRateSensorTest" />
+  <Module PersistentId="217107DA-2F1F-4F50-994D-B47E333A11C7" ModuleId="NETMFx.GroveHeartRateSensor" />
+  <Module PersistentId="D551DA73-981C-4E95-B616-3F2275B54D92" ModuleId="NETMFx.GroveHeartRateSensor_1" />
+</Modules>

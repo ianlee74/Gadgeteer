@@ -1,0 +1,6 @@
+﻿Code version: 6.1.1000.82
+Assembly name Microsoft.SPOT.Hardware, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null mvid {ee517343-89c7-4e29-bc73-fbebb9a5ca83}
+* ref mscorlib, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {04710a8b-4913-4a4f-80fb-a1155aebaaf7}
+* ref Microsoft.SPOT.Native, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {fb65f0aa-eb9c-48c0-b956-71cc603aaf6e}

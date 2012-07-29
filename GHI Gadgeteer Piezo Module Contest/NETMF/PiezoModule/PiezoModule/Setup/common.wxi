@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- This file includes global constants for the module installer.  Module manufacturers should change the below to customise this 
+  template to their module. -->
+  
+  <!-- Change this whenever building a new installer.  The fourth number is ignored, so change one of the top three.
+  Otherwise, users will not be able to upgrade properly; Windows Installer will exit with an error instead of upgrading. -->
+  <!-- Also change the version numbers in Properties/AssemblyInfo.cs -->
+  <?define ModuleSoftwareVersion = "1.0.0.0" ?>
+
+  <!-- SafeModuleName should match the module name printed on the module PCB, without any spaces/punctuation. -->
+  <?define SafeModuleName = "PiezoModule" ?>
+
+  <!-- SafeManufacturer should match the manufacturer name printed on the module PCB, without any spaces/punctuation. -->
+  <?define SafeManufacturer = "ManufacturerName" ?>
+
+  <!-- FullManfacturer can have spaces, e.g. Microsoft Research.  This shows up as the manufacturer name in add/remove programs. -->
+  <?define FullManufacturer = "" ?>
+
+  <!-- No need to change anything below this line. -->
+  <?define OutputFileName = "GTM.$(var.SafeManufacturer).$(var.SafeModuleName)"?>
+  
+  <?define RegistryKeyNetMF41 = "SOFTWARE\Microsoft\.NETMicroFramework\v4.1\AssemblyFoldersEx\$(var.OutputFileName)"?>
+  <?define RegistryKeyVSAddin = "SOFTWARE\Microsoft\.NETGadgeteer\v2\HardwareDefinitionFolders\$(var.OutputFileName)" ?>
+  
+  <?define guid_msm_comp_files_id = "2cdc823c-148e-41f4-8942-bce599a79b68" ?>
+  <?define guid_msm_comp_files_be_id = "7b844126-b6f1-409c-b835-d431984675f0" ?>
+  <?define guid_msm_comp_files_le_id = "ccd5ad44-b62b-4e33-809e-65fefe79335d" ?>
+  <?define guid_msm_comp_resources_id = "eb61a41e-88fe-4784-8232-ede04fe261db" ?>
+  <?define guid_msm_comp_registry_id = "e210e40f-9324-417a-9cae-77e00c4df9d7" ?>
+  
+  <?define guid_msi_upgrade_code =  "75e06940-099c-42d3-a28a-ee244185f960" ?>
+
+  <?define guid_msm_package_id = "7d3a8a98-2c3d-478f-8ea6-c4d40e206fda" ?>
+  <?define guid_msm_comp_gadgeteerhardware_id = "eff6067d-7dc0-4038-8459-5672fb730fd5"?>
+    
+</Include>

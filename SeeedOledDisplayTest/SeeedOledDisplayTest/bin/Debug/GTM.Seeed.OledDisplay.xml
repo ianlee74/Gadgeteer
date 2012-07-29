@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.Seeed.OledDisplay</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.Seeed.OledDisplay">
+            <summary>
+            A 128x128 OLED Display module by Seeed Studio for Microsoft .NET Gadgeteer
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.OledDisplay.#ctor(System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.OledDisplay._sleepAfterSend">
+            <summary>
+            Gets or sets a value that indicates whether the thread should sleep after a send operation.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.OledDisplay._sleeptime">
+            <summary>
+            Gets or sets the amount of time to sleep (if <see cref="F:Gadgeteer.Modules.Seeed.OledDisplay._sleepAfterSend"/> is <b>true</b>)
+            after a send operation.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.OledDisplay.Send(System.Byte,System.Byte[])">
+            <summary>
+            Sends a command to the display device.
+            </summary>
+            <param name="command">The command to send.</param>
+            <param name="data">The command data.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.OledDisplay.InitializeDisplay">
+            <summary>
+            Initializes the display.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.OledDisplay.FlushRawBitmap(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte[])">
+            <summary>
+            Writes the passed in data to the passed in position on the screen
+            </summary>
+            <param name="x">X position (0-127)</param>
+            <param name="y">Y position (0-127)</param>
+            <param name="width">Width of image to draw (0-127)</param>
+            <param name="height">Height of image to draw (0-127)</param>
+            <param name="data">Data to draw (max size 128 * 64 * 2)</param>
+        </member>
+    </members>
+</doc>

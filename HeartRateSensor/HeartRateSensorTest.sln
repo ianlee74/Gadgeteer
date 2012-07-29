@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeartRateSensorTest", "HeartRateSensorTest\HeartRateSensorTest.csproj", "{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETMFx.GroveHeartRateSensor", "..\..\NETMFx.GroveHeartRateSensor\NETMFx.GroveHeartRateSensor.csproj", "{D551DA73-981C-4E95-B616-3F2275B54D92}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs29
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HeartRateSensorTest\\HeartRateSensorTest.csproj
+		SccProjectName1 = HeartRateSensorTest
+		SccLocalPath1 = HeartRateSensorTest
+		SccProjectUniqueName2 = ..\\..\\NETMFx.GroveHeartRateSensor\\NETMFx.GroveHeartRateSensor.csproj
+		SccProjectName2 = ../../NETMFx.GroveHeartRateSensor
+		SccLocalPath2 = ..\\..\\NETMFx.GroveHeartRateSensor
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D551DA73-981C-4E95-B616-3F2275B54D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D551DA73-981C-4E95-B616-3F2275B54D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D551DA73-981C-4E95-B616-3F2275B54D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D551DA73-981C-4E95-B616-3F2275B54D92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

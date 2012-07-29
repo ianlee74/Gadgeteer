@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="BD13677A-70A9-4FAC-A4E1-11C72471B7BB" ModuleId="IO60P16" />
+  <Module PersistentId="96765F38-8752-487C-80FD-D3C41A5FF907" ModuleId="Test App" />
+  <Module PersistentId="AC770863-D966-4864-97F3-2ABA08910B14" ModuleId="NETMFx.LedCube.IO60P16" />
+</Modules>

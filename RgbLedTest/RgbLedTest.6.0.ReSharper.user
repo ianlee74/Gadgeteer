@@ -1,0 +1,55 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.generated.cs" caret="1123" fromTop="5" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="1103" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="0" fromTop="0" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.generated.cs" caret="0" fromTop="0" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.generated.cs" caret="1123" fromTop="13" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.generated.cs" caret="1123" fromTop="6" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="413" fromTop="16" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.generated.cs" caret="1123" fromTop="5" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="713" fromTop="22" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="1666" fromTop="18" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="2019" fromTop="31" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="1411" fromTop="17" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="1384" fromTop="20" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="1103" fromTop="8" />
+      <File id="DB8F1BC6-3EE7-49ED-88BD-F8B5CE6679C3/f:Program.cs" caret="2071" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:Gadgeteer.Modules.GHIElectronics.MulticolorLed">
+      <Item value="TurnOff`0" priority="80" />
+      <Item value="TurnRed`0" priority="80" />
+      <Item value="TurnGreen`0" priority="107" />
+      <Item value="TurnBlue`0" priority="53" />
+      <Item value="SwapGreenBlueValues`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="led" priority="127" />
+      <Item value="led1" priority="95" />
+      <Item value="led2" priority="159" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

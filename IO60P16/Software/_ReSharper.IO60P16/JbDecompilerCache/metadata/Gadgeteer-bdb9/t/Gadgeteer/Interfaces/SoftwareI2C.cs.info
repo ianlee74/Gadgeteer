@@ -1,0 +1,20 @@
+﻿Code version: 6.1.1000.82
+Assembly name Gadgeteer, Version=2.41.0.0, Culture=neutral, PublicKeyToken=null mvid {c007b500-eec4-45fe-bf6b-57ea1ca4ae1e}
+* ref mscorlib, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {04710a8b-4913-4a4f-80fb-a1155aebaaf7}
+* ref Microsoft.SPOT.Net, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {a406d2b6-ef73-4954-8008-681c05f0b261}
+* ref Microsoft.SPOT.TinyCore, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {b7e7ed6d-5ff2-4d45-8cb3-5322975bec02}
+* ref Microsoft.SPOT.Graphics, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {76f117bf-ef74-4e01-ba06-cc8cc4e354d4}
+* ref Microsoft.SPOT.Native, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {fb65f0aa-eb9c-48c0-b956-71cc603aaf6e}
+* ref Microsoft.SPOT.Hardware, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {ee517343-89c7-4e29-bc73-fbebb9a5ca83}
+* ref Microsoft.SPOT.IO, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {8dfec41a-d197-43b6-ba38-c1d5ad7ce5e5}
+* ref System.IO, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {55082a0f-2352-4b97-a038-811047a4bcd7}
+* ref Microsoft.SPOT.Hardware.SerialPort, Version=4.1.2821.0, Culture=neutral, PublicKeyToken=null
+  mvid {a1e29296-3f1f-4873-965a-dc56f8433b50}

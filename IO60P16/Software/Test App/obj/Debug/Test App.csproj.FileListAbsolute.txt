@@ -1,0 +1,56 @@
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\le\Test App.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\be\Test App.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\le\Test App.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\be\Test App.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\Test App.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\Test App.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\le\Test App.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\le\Test App.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\be\Test App.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\be\Test App.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\Gadgeteer.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZCerberus.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GTM.GHIElectronics.IO60P16.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\NETMFx.LedCube.IO60P16.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GHI.OSHW.Hardware.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\Gadgeteer.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZCerberus.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GTM.GHIElectronics.IO60P16.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\NETMFx.LedCube.IO60P16.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GHI.OSHW.Hardware.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\Gadgeteer.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZCerberus.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GTM.GHIElectronics.IO60P16.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\NETMFx.LedCube.IO60P16.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\LE\GHI.OSHW.Hardware.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\Gadgeteer.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZCerberus.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GTM.GHIElectronics.IO60P16.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\NETMFx.LedCube.IO60P16.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\BE\GHI.OSHW.Hardware.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\Gadgeteer.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GTM.GHIElectronics.IO60P16.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\NETMFx.LedCube.IO60P16.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GHI.OSHW.Hardware.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\NETMFx.LedCube.IO60P16.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GTM.GHIElectronics.IO60P16.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GTM.GHIElectronics.IO60P16.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\Gadgeteer.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\Gadgeteer.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\bin\Debug\GHI.OSHW.Hardware.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\ResolveAssemblyReference.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\TinyCLR_DebugReferences.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\Test_App.Resources.resources
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\GenerateResource.read.1.tlog
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\GenerateResource.write.1.tlog
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\Test_App.Resources.tinyresources
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\TinyResGen.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\be\Test App.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\be\Test App.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\le\Test App.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\le\Test App.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\Test App.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\Software\Test App\obj\Debug\Test App.pdb

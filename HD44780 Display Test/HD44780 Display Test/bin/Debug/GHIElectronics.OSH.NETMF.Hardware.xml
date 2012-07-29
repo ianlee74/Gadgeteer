@@ -1,0 +1,934 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHIElectronics.OSH.NETMF.Hardware</name>
+    </assembly>
+    <members>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register">
+            <summary>
+            Provide register access.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.#ctor(System.UInt32)">
+            <summary>
+            Creates a new register.
+            </summary>
+            <param name="address">Address.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.Write(System.UInt32)">
+            <summary>
+            Writes a value to the register.
+            </summary>
+            <param name="value">Value to be written.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.Read">
+            <summary>
+            Reads the register's value.
+            </summary>
+            <returns>Value of the register.</returns>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.SetBits(System.UInt32)">
+            <summary>
+            Sets certain bits in the register using a mask.
+            </summary>
+            <param name="mask">Register value mask.</param>
+            <remarks>
+            Bits of value 1 in mask are set in the register.<br/>
+            Bits of value 0 in mask are not changed.<br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.ClearBits(System.UInt32)">
+            <summary>
+            Clears certain bits in the register using a mask.
+            </summary>
+            <param name="mask">Register value mask.</param>
+            <remarks>
+            Bits of value 1 in mask are cleared in the register.<br/>
+            Bits of value 0 in mask are not changed.<br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.Register.ToggleBits(System.UInt32)">
+            <summary>
+            Toggles certain bits in the register using a mask.
+            </summary>
+            <param name="mask">Register value mask.</param>
+            <remarks>
+            Bits of value 1 in mask are toggled in the register.<br/>
+            Bits of value 0 in mask are not changed.<br/>
+            </remarks>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.StorageDev">
+            <summary>
+            Allows SD Card blockstorage to be added in realtime after system is booted
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.StorageDev.MountSD">
+            <summary>
+            Allows SD Card blockstorage to be added in realtime after system is booted
+            </summary>
+            <remarks>
+            A failed mount will raise a CLR_E_FAIL exception<br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.StorageDev.MountSD(System.UInt32)">
+            <summary>
+            Allows SD Card blockstorage to be added in realtime after system is booted, specifying clock frequency in KHz
+            </summary>
+            <param name="ClockSpeedinKHz">Specify the SD Card's clock frequency in KHz</param>
+            <remarks>
+            A failed mount will raise a CLR_E_FAIL exception<br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.StorageDev.UnmountSD">
+            <summary>
+            Allows SD Card blockstorage to be removed in realtime without a system reboot
+            </summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.PWM">
+            <summary>
+            Provides PWM functionality.
+            </summary>
+            <remarks>
+            Please refer to your platform documentation for the available PWM pins.<br/>
+            <br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Dispose">
+            <summary>
+            Disposes the pin and marks it as available again.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Finalize">
+            <exclude/>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.#ctor(GHIElectronics.OSH.NETMF.Hardware.PWM.Pin)">
+            <summary>
+            Creates a new PWM pin.
+            </summary>
+            <param name="pin">Needed pin.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Set(System.Int32,System.Byte)">
+            <summary>
+            Sets the PWM's frequency and duty cycle.
+            </summary>
+            <param name="freq_Hz">Required frequency in Hertz.</param>
+            <param name="dutyCycle">Duty cycle percentage. 0 to 100 inclusive.</param>
+            <remarks>
+            Setting the frequency to 0 would stop the PWM.<br/>
+            0% and 100% are valid values for the duty cycle.
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.Set(System.Boolean)">
+            <summary>
+            Sets the PWM pin as high or low.
+            </summary>
+            <param name="pinState"><c>true</c> if high.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.PWM.SetPulse(System.UInt32,System.UInt32)">
+            <summary>
+            Sets the PWM using the period time and high time.
+            </summary>
+            <param name="period_nanosecond">Period of the signal in nano seconds.</param>
+            <param name="highTime_nanosecond">High time of the signal in nano seconds.</param>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin">
+            <summary>
+            Lists the PWM pins.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM0">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM1">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM2">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM3">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM4">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM5">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM6">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM7">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM8">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM9">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM10">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM11">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM12">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM13">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM14">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.PWM.Pin.PWM15">
+            <summary>PWM pin.</summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.LowLevel.AddressSpace">
+            <summary>
+            Provides access to the address space.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.AddressSpace.Write(System.UInt32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a buffer to the target address space.
+            </summary>
+            <param name="address">Starting address.</param>
+            <param name="buffer">Buffer.</param>
+            <param name="offset">Offset.</param>
+            <param name="count">Count.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LowLevel.AddressSpace.Read(System.UInt32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads the address space into a buffer.
+            </summary>
+            <param name="address">Starting address.</param>
+            <param name="buffer">Buffer.</param>
+            <param name="offset">Offset.</param>
+            <param name="count">Count.</param>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus">
+            <summary>
+            Master I2C bus functionality implemented in software.
+            </summary>
+            <remarks>
+            This class provides I2C functionality on any two digital pins. It is implemented by toggling the pins using software. It only supports one master on the same bus. Multiple masters on different buses work correctly.<br/>
+            <br/>
+            You must provide two pins: one for I2C clock and one for I2C data. The user must connect external pull-up resistors on the pins as required for I2C operation.<br/>
+            <br/>
+            Currently, only 7-bit I2C addresses are supported.<br/>
+            Clock rate is currently ignored. Specify 0 for this field. This will make the rate as fast as possible.
+            </remarks>
+            <example>
+            The following example uses two I2C devices on the same bus.<br/>
+            <!-- Failed to insert some or all of included XML --><include file="_exampleSoftwareI2C.cs" path="code"></include>
+            </example>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.#ctor(Microsoft.SPOT.Hardware.Cpu.Pin,Microsoft.SPOT.Hardware.Cpu.Pin)">
+            <summary>
+            Creates an I2C bus using the clock and data pins.
+            </summary>
+            <param name="clockPin">Clock pin.</param>
+            <param name="dataPin">Data pin.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.CreateI2CDevice(System.UInt16,System.Int32)">
+            <summary>
+            Creates an I2C device on the bus.
+            </summary>
+            <param name="address">Address of the device. This must be a 7 bit address.</param>
+            <param name="clockRateKHz">Clock rate in KHz. Currently ignored. Specify 0 to go as fast as possible.</param>
+            <returns>Created I2C device.</returns>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.DirectI2CWriteRead(Microsoft.SPOT.Hardware.Cpu.Pin,Microsoft.SPOT.Hardware.Cpu.Pin,System.Int32,System.UInt16,System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Processes I2C directly without creating objects.
+            </summary>
+            <param name="clockPin">Clock pin.</param>
+            <param name="dataPin">Data pin.</param>
+            <param name="clockRateKHz">Clock rate in KHz.</param>
+            <param name="address">Address of the device.</param>
+            <param name="writeBuffer">Write buffer.</param>
+            <param name="writeOffset">Offset into the write buffer.</param>
+            <param name="writeLength">Number of bytes to write.</param>
+            <param name="readBuffer">Read buffer.</param>
+            <param name="readOffset">Offset into the read buffer.</param>
+            <param name="readLength">Number of bytes to read.</param>
+            <param name="numWritten">Number of bytes written successfully.</param>
+            <param name="numRead">Number of bytes read successfully.</param>
+            <returns><c>true</c> if all the required bytes are written and read successfully.</returns>
+            <remarks>
+            Do not use this method. It is intended for internal use only. See <c>CreateI2CDevice</c> instead.
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.Dispose">
+            <summary>
+            Disposes the I2C bus.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.Finalize">
+            <exclude/>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.I2CDevice">
+            <summary>
+            Represents an I2C device on a bus.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.I2CDevice.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a data buffer to the I2C device.
+            </summary>
+            <param name="buffer">Buffer.</param>
+            <param name="offset">Offset into the buffer.</param>
+            <param name="count">Number of bytes to write.</param>
+            <returns>Number of bytes sent successfully.</returns>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.I2CDevice.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a data buffer from the I2C device.
+            </summary>
+            <param name="buffer">Buffer.</param>
+            <param name="offset">Offset into the buffer.</param>
+            <param name="count">Number of bytes to read.</param>
+            <returns>Number of bytes read successfully.</returns>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.SoftwareI2CBus.I2CDevice.WriteRead(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Writes a data buffer then reads a data buffer from the I2C device.
+            </summary>
+            <param name="writeBuffer">Write buffer.</param>
+            <param name="writeOffset">Offset into the write buffer.</param>
+            <param name="writeLength">Number of bytes to write.</param>
+            <param name="readBuffer">Read buffer.</param>
+            <param name="readOffset">Offset into the read buffer.</param>
+            <param name="readLength">Number of bytes to read.</param>
+            <param name="numWritten">Number of bytes written successfully.</param>
+            <param name="numRead">Number of bytes read successfully.</param>
+            <returns><c>true</c> if all the required bytes are written and read successfully.</returns>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.HeadlessConfig">
+            <summary>
+            Choose for headless LCD.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LCDController.Set(GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations)">
+            <summary>
+            Sets LCD Configuration.
+            </summary>
+            <param name="config">LCD configuration stucture containing LCD configuration information to be set.</param>
+            <returns><c>true</c> if configurations were updated. <c>false</c> if configurations did not change.</returns>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations">
+            <summary>
+            Configurations.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="Width">Resolution width.</param>
+            <param name="Height">Resolution height.</param>
+            <param name="PriorityEnable">Internal LCD bus priority.</param>
+            <param name="OutputEnableIsFixed"><c>true</c> if LCD enable is a fixed state. <c>false</c> if LCD enable is managed by LCD controller.</param>
+            <param name="OutputEnablePolarity"><c>true</c> if active state is high.</param>
+            <param name="HorizontalSyncPolarity"><c>true</c> if active state is high.</param>
+            <param name="VerticalSyncPolarity"><c>true</c> if active state is high.</param>
+            <param name="PixelPolarity"><c>true</c> if your LCD clocks data on the rising edge of the LCD clock.</param>
+            <param name="HorizontalSyncPulseWidth">Horizontal Sync pulse width in clock cycles.</param>
+            <param name="HorizontalBackPorch">Horizontal back porch in clock cycles.</param>
+            <param name="HorizontalFrontPorch">Horizontal front porch in clock cycles.</param>
+            <param name="VerticalSyncPulseWidth">Vertical Sync pulse width given by number of lines.</param>
+            <param name="VerticalBackPorch">Vertical back porch given by number of lines.</param>
+            <param name="VerticalFrontPorch">Vertical front porch given by number of lines.</param>
+            <param name="PixelClockDivider">Pixel clock divider.</param>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.Width">
+            <summary>
+            Resolution width.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.Height">
+            <summary>
+            Resolution height.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.PriorityEnable">
+            <summary>
+            Internal LCD bus priority.
+            </summary>
+            <remarks>
+            This is only supported on EMX. By setting this flag to true, the LCD controller will get the highest priority for the processor which will significantly reduce the general performance of the system for other processes. This feature is usually used for displays that require very high refresh rates such as VGA displays.
+            </remarks>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.OutputEnableIsFixed">
+            <summary>
+            <c>true</c> if LCD enable is a fixed state. <c>false</c> if LCD enable is managed by LCD controller.
+            </summary>
+            <remarks>
+            For ChipworkX, LCD Enable is PB3. If Enable is fixed, no changes are done for PB3 and it can be used as a regular I/O. If Enable is not fixed, LCD Enable is handled by the LCD controller directly.
+            </remarks>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.OutputEnablePolarity">
+            <summary>
+            <c>true</c> if active state is high.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.HorizontalSyncPolarity">
+            <summary>
+            <c>true</c> if active state is high.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.VerticalSyncPolarity">
+            <summary>
+            <c>true</c> if active state is high.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.PixelPolarity">
+            <summary>
+            <c>true</c> if your LCD clocks data on the rising edge of the LCD clock.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.HorizontalSyncPulseWidth">
+            <summary>
+            Horizontal Sync pulse width in clock cycles.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.HorizontalBackPorch">
+            <summary>
+            Horizontal back porch in clock cycles.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.HorizontalFrontPorch">
+            <summary>
+            Horizontal front porch in clock cycles.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.VerticalSyncPulseWidth">
+            <summary>
+            Vertical Sync pulse width given by number of lines.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.VerticalBackPorch">
+            <summary>
+            Vertical back porch given by number of lines.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.VerticalFrontPorch">
+            <summary>
+            Vertical front porch given by number of lines.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.LCDController.Configurations.PixelClockDivider">
+            <summary>
+            Pixel clock divider.
+            </summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.EthernetENC28">
+            <summary>
+            Provides the ability to use the Ethernet module ENC28.
+            </summary>
+            <remarks>
+            Not currently implemented.<br/>
+            <br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.EthernetENC28.#ctor(System.Int32)">
+            <param name="interfaceIndex">Index number of the interface</param>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.AnalogIn">
+            <summary>
+            Provides the ability to read an analog input pin.
+            </summary>
+            <remarks>
+            Please refer to your platform documentation for the available analog pins. The analog pin is initialized with the default platform resolution.<br/>
+            <br/>
+            </remarks>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Dispose">
+            <summary>
+            Disposes the pin and marks it as available again.
+            </summary>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Finalize">
+            <exclude/>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.#ctor(GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin)">
+            <summary>
+            Creates a new analog pin.
+            </summary>
+            <param name="ain">Needed analog pin.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.SetLinearScale(System.Int32,System.Int32)">
+            <summary>
+            Scales the analog value when reading automatically into a specific range.
+            </summary>
+            <param name="minValue">Min value.</param>
+            <param name="maxValue">Max value.</param>
+        </member>
+        <member name="M:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Read">
+            <summary>
+            Reads the current analog value.
+            </summary>
+            <returns>Current analog value.</returns>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin">
+            <summary>
+            Lists the analog input pins.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain0">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain1">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain2">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain3">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain4">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain5">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain6">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain7">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain8">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain9">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain10">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain11">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain12">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain13">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain14">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.AnalogIn.Pin.Ain15">
+            <summary>Analog input pin.</summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.FEZHydra">
+            <summary>
+            Exposes FEZ Hydra specific functionality.
+            </summary>
+        </member>
+        <member name="T:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin">
+            <summary>
+            Provides Pin definitions for FEZ Hydra.
+            </summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.GPIO_NONE">
+            <summary>A value indicating that no GPIO pin is specified.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PA31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PB31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PC31">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD0">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD1">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD2">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD3">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD4">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD5">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD6">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD7">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD8">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD9">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD10">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD11">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD12">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD13">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD14">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD15">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD16">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD17">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD18">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD19">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD20">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD21">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD22">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD23">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD24">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD25">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD26">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD27">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD28">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD29">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD30">
+            <summary>Digital I/O.</summary>
+        </member>
+        <member name="F:GHIElectronics.OSH.NETMF.Hardware.FEZHydra.Pin.PD31">
+            <summary>Digital I/O.</summary>
+        </member>
+    </members>
+</doc>

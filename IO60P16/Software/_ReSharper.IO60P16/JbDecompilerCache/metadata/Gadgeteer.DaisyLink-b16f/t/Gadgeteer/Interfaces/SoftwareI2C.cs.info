@@ -1,0 +1,10 @@
+﻿Code version: 6.1.1000.82
+Assembly name Gadgeteer.DaisyLink, Version=2.42.0.0, Culture=neutral, PublicKeyToken=null mvid {c92064bd-cf21-4cd7-adca-92d783a18a06}
+* ref mscorlib, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null
+  mvid {4ff7ff3e-b53e-4984-ad37-a924a66271da}
+* ref Gadgeteer, Version=2.42.0.0, Culture=neutral, PublicKeyToken=null
+  mvid {ad2300cd-8462-4912-a6d1-9f88e5fe1ee3}
+* ref Microsoft.SPOT.Hardware, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null
+  mvid {d13d1465-b922-49bc-aa36-dc0d976f3197}
+* ref Microsoft.SPOT.Native, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null
+  mvid {a129b475-1d88-4f40-b1fb-7da834f22ebd}

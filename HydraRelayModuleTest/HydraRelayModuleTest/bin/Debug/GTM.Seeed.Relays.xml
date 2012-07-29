@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.Seeed.Relays</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.Seeed.Relays">
+            <summary>
+            Relays module for Microsoft .NET Gadgeteer with four relays on the printed circuit board.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Relays.#ctor(System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Relays.Relay1">
+            <summary>
+            Gets or sets the state of relay 1. Setting the relay to True will result in 
+            the Normally Open (NO) and COM terminal being connected, and the corresponding LED will turn on. 
+            Setting the relay to False will result in the Normally Closed (NC) and COM terminal being connected, 
+            and the LED will turn off.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Relays.Relay2">
+            <summary>
+            Gets or sets the state of relay 2. Setting the relay to True will result in 
+            the Normally Open (NO) and COM terminal being connected, and the corresponding LED will turn on. 
+            Setting the relay to False will result in the Normally Closed (NC) and COM terminal being connected, 
+            and the LED will turn off.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Relays.Relay3">
+            <summary>
+            Gets or sets the state of relay 3. Setting the relay to True will result in 
+            the Normally Open (NO) and COM terminal being connected, and the corresponding LED will turn on. 
+            Setting the relay to False will result in the Normally Closed (NC) and COM terminal being connected, 
+            and the LED will turn off.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Relays.Relay4">
+            <summary>
+            Gets or sets the state of relay 4. Setting the relay to True will result in 
+            the Normally Open (NO) and COM terminal being connected, and the corresponding LED will turn on. 
+            Setting the relay to False will result in the Normally Closed (NC) and COM terminal being connected, 
+            and the LED will turn off.
+            </summary>
+        </member>
+    </members>
+</doc>

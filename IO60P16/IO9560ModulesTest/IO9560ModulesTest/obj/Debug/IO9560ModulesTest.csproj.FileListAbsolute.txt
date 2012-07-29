@@ -1,0 +1,86 @@
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.exe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.exe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\IO9560ModulesTest.exe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\IO9560ModulesTest.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\Gadgeteer.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\Gadgeteer.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\Gadgeteer.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\Gadgeteer.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.dll
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.dll
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.dll
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.xml
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.xml
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.xml
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\ResolveAssemblyReference.cache
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\TinyCLR_DebugReferences.cache
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.Resources.resources
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\GenerateResource.read.1.tlog
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\GenerateResource.write.1.tlog
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.Resources.tinyresources
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\TinyResGen.cache
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.exe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.pdb
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\be\IO9560ModulesTest.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\be\IO9560ModulesTest.pdbx
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\le\IO9560ModulesTest.pe
+H:\Embedded\PROJECTS\FEZ.net micro\Gadgeteer\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\le\IO9560ModulesTest.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\IO9560ModulesTest.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\IO9560ModulesTest.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\le\IO9560ModulesTest.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\be\IO9560ModulesTest.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\Gadgeteer.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\Gadgeteer.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\Gadgeteer.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\Gadgeteer.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\Gadgeteer.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\ResolveAssemblyReference.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\TinyCLR_DebugReferences.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.Resources.resources
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\GenerateResource.read.1.tlog
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\GenerateResource.write.1.tlog
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.Resources.tinyresources
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\TinyResGen.cache
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\be\IO9560ModulesTest.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\be\IO9560ModulesTest.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\le\IO9560ModulesTest.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\le\IO9560ModulesTest.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.exe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\obj\Debug\IO9560ModulesTest.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHI.OSHW.Hardware.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHI.OSHW.Hardware.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHI.OSHW.Hardware.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHI.OSHW.Hardware.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHI.OSHW.Hardware.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHI.OSHW.Hardware.xml
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZCerberus.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZCerberus.pe
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZCerberus.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZCerberus.pdbx
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.dll
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.pdb
+D:\My Data\Source Code\Gadgeteer\IO60P16\IO9560ModulesTest\IO9560ModulesTest\bin\Debug\GHIElectronics.Gadgeteer.FEZCerberus.xml

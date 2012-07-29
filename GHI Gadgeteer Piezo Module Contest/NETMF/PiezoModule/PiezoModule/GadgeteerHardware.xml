@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GadgeteerDefinitions xmlns="http://schemas.microsoft.com/Gadgeteer/2011/Hardware">
+  <ModuleDefinitions>
+    <!-- This module definition should be filled in.  Mouse over any attribute name to get more help about that attribute. -->
+    <!-- The Unique ID is auto-generated and does not usually need to be modified. -->
+    <ModuleDefinition Name="PiezoModule"
+                  UniqueId="420c4670-b0a9-4782-8efc-0c262013cb94"
+                  Manufacturer=""
+                  Description="A PiezoModule module"
+                  InstanceName="PiezoModule"
+                  Type="Gadgeteer.Modules.ManufacturerName.PiezoModule"
+                  ModuleSuppliesPower="false"
+                  HardwareVersion="1.0"
+                  Image="Resources\Image.jpg"
+                  BoardHeight="22"
+                  BoardWidth="44"
+                  MinimumGadgeteerCoreVersion="2.41.100"
+                  HelpUrl=""
+      			>
+      
+      <!-- This lists the assembly which provides the API to this module, i.e. the output assembly of this template. -->
+      <Assemblies>
+        <Assembly MFVersion="4.1" Name="GTM.ManufacturerName.PiezoModule"/>
+      </Assemblies>
+
+      <!--
+      This is an example socket specification with two sockets on the board.  
+      The socket positions are specified in mm from the top left corner of the board, with the orientation 90 indicating the socket notches are pointing upwards (0=right, 180=left, 270=down)
+      -->
+      <Sockets>
+        
+        <!-- This example socket is compatible with socket types XY which has electrical connections to pins 3 and 4 -->
+        <Socket Left="10" Top="10" Orientation="90" ConstructorOrder="1" TypesLabel="XY">
+          <Types>
+            <Type>X</Type>
+            <Type>Y</Type>
+          </Types>
+          <Pins>
+            <Pin Shared="false">3</Pin>
+            <Pin Shared="false">4</Pin>
+          </Pins>
+        </Socket>
+
+        <!-- This example socket is compatible with socket type S, it is optional, and it has electrical connections to pins 3,4,5,7,8,9, with 7,8,9 being shareable (SPI bus) -->
+        <Socket Left="10" Top="30" Orientation="90" ConstructorOrder="2" TypesLabel="S" Optional="true">
+          <Types>
+            <Type>S</Type>
+          </Types>
+          <Pins>
+            <Pin Shared="false">3</Pin>
+            <Pin Shared="false">4</Pin>
+            <Pin Shared="false">5</Pin>
+            <Pin Shared="true">7</Pin>
+            <Pin Shared="true">8</Pin>
+            <Pin Shared="true">9</Pin>
+          </Pins>
+        </Socket>
+        
+      </Sockets>      
+      
+      <!-- Use this tag if the module requires specific libraries provided by the mainboard or by other modules -->      
+      <!--
+      <ExtraLibrariesRequired>
+        <Assembly MFVersion="4.1" Name="FooHelper"/>
+      </ExtraLibrariesRequired>
+      -->
+      
+      <!-- Use this tag if the module provides libraries that may be required by other modules-->
+      <!--
+      <LibrariesProvided>
+        <Assembly MFVersion="4.1" Name="FooHelper"/>
+      </LibrariesProvided>
+      -->
+      
+      <!-- Use the ProvidedSocket tag if this module provides a socket that another module can plug into -->
+      <!-- The example below is for DaisyLink modules which provide a socket type "*" -->
+      <!--
+      <ProvidedSockets>
+        <ProvidedSocket Label="*" Left="30" Top="10" Orientation="0" ConstructorParameter="DaisyLinkSocketNumber">
+          <Types>
+            <Type>*</Type>
+          </Types>
+        </ProvidedSocket>
+      </ProvidedSockets>
+      -->
+
+    </ModuleDefinition>
+  </ModuleDefinitions>
+</GadgeteerDefinitions>

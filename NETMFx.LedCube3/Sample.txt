@@ -1,0 +1,55 @@
+﻿using System;
+using Microsoft.SPOT.Hardware;
+using NETMFx.LedCube;
+using NETMFx.LedCube.Effects;
+
+namespace LED_Cube_3
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var cube =  new LedCube3( 3,
+                                        // Levels
+                                        new[] { (Cpu.Pin)28,                   // A0
+                                                (Cpu.Pin)26,                   // A1
+                                                (Cpu.Pin)24                    // A2
+                                        },
+                                        // LEDs
+                                        new [] { (Cpu.Pin)22,                  // A3
+                                                 (Cpu.Pin)29,                  // A4
+                                                 (Cpu.Pin)32,                  // A5
+                                                 (Cpu.Pin)19,                  // D4
+                                                 (Cpu.Pin)2,                   // D5
+                                                 (Cpu.Pin)7,                   // D6
+                                                 (Cpu.Pin)15,                  // D7
+                                                 (Cpu.Pin)23,                  // D8
+                                                 (Cpu.Pin)25 });               // D9
+            //var effect = new TallyUp(cube);
+            //var effect = new TallyDown(cube);
+            //var effect = new Randomizer(cube);
+            //var effect = new AsciiChar(cube);
+            //var effect = new SirenCounterclockwise(cube);
+            //var effect = new SirenClockwise(cube);
+            //var effect = new SpiralUp(cube);
+            //var effect = new SpiralDown(cube);
+            var effects = new CubeEffect[] {new AsciiChar(cube, "HELLO WORLD"), 
+                                            new TallyUp(cube, 100),
+                                            new TallyDown(cube, 50),
+                                            new SirenClockwise(cube, 100),
+                                            new SirenCounterclockwise(cube, 100),
+                                            new AsciiChar(cube, 100, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 
+                                            new SpiralUp(cube, 100),
+                                            new SpiralDown(cube, 50),
+                                            new Randomizer(cube, 20)
+            };
+            while (true)
+            {
+                foreach (var effect in effects)
+                {
+                    effect.Start();
+                }
+            }
+        }
+    }
+}
