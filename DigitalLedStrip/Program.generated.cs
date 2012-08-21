@@ -32,7 +32,7 @@ namespace DigitalLedStrip
         private void InitializeModules()
         {   
             // Initialize GTM.Modules and event handlers here.		
-            ledExtender = new GTM.GHIElectronics.Extender(6);
+            ledExtender = new GTM.GHIElectronics.Extender(5);
 
         }
     }

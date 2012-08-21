@@ -40,6 +40,8 @@ namespace ThreelnDotOrg.NETMF.Hardware
             Unknown = 0x00,
             DS18S20 = 0x10,
             DS18B20 = 0x28,
+            DS1822 = 0x22,
+            DS2438 = 0x26
         }
 
         public static Device[] Scan(OneWire ow, params Family[] includeFamilies)
@@ -68,7 +70,7 @@ namespace ThreelnDotOrg.NETMF.Hardware
                 {
                     foreach (var f in includeFamilies)
                     {
-                        if (addr[0] == (byte)f)
+                        if (da[0] == (byte)f)
                             list.Add(new Device(da));
                     }
                 }

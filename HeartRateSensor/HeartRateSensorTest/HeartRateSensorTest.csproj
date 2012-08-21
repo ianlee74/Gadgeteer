@@ -99,7 +99,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\NETMFx.GroveHeartRateSensor\NETMFx.GroveHeartRateSensor.csproj">
+    <ProjectReference Include="..\..\..\NETMFx\NETMFx.GroveHeartRateSensor\NETMFx.GroveHeartRateSensor.csproj">
       <Project>{D551DA73-981C-4E95-B616-3F2275B54D92}</Project>
       <Name>NETMFx.GroveHeartRateSensor</Name>
     </ProjectReference>

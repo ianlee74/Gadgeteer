@@ -22,6 +22,7 @@ namespace ThreelnDotOrg.NETMF.Hardware
             {
 
                 var x = m_ow.FindAllDevices();
+                
                 var devs = OneWireBus.Scan(m_ow, OneWireBus.Family.DS18B20);
 
                 if (devs == null || devs.Length < 1)
@@ -124,7 +125,7 @@ namespace ThreelnDotOrg.NETMF.Hardware
             // address the device
             m_ow.WriteByte(Command.MatchROM);
             WriteBytes(m_dev.Address);
-
+            
             // read the data from the sensor
             m_ow.WriteByte(Command.ReadScratchPad);
 

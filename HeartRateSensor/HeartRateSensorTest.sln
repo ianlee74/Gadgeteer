@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeartRateSensorTest", "HeartRateSensorTest\HeartRateSensorTest.csproj", "{EF15D6B7-D4C6-4F81-B1F4-4555649E8F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETMFx.GroveHeartRateSensor", "..\..\NETMFx.GroveHeartRateSensor\NETMFx.GroveHeartRateSensor.csproj", "{D551DA73-981C-4E95-B616-3F2275B54D92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETMFx.GroveHeartRateSensor", "..\..\NETMFx\NETMFx.GroveHeartRateSensor\NETMFx.GroveHeartRateSensor.csproj", "{D551DA73-981C-4E95-B616-3F2275B54D92}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution

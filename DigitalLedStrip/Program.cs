@@ -26,6 +26,13 @@ namespace DigitalLedStrip
 			GT.Socket ledSocket = GT.Socket.GetSocket(ledExtender.ExtenderSocketNumber, true, ledExtender, null);            
 			mLedStrip = new LedStripLPD8806(ledSocket, NUM_LEDS);
 
+            mLedStrip.Set(255,255,255);
+            
+            Thread.Sleep(10000);
+
+            mLedStrip.TurnOff();
+		    return;
+
 		    var ledTimer = new GT.Timer(20000);
 		    ledTimer.Tick += timer => FlashTest();
             ledTimer.Start();

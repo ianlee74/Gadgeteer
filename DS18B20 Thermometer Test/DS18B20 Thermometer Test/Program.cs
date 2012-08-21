@@ -18,7 +18,7 @@ namespace DS18B20_Thermometer_Test
            thermometer = new DS18B20(thermoSocket.CpuPins[4]);
 
            var thermoTimer = new GT.Timer(1000);
-           thermoTimer.Tick += timer => Debug.Print(thermometer.ReadTemperature().ToString());
+           thermoTimer.Tick += timer => Debug.Print(thermometer.ConvertAndReadTemperature().ToString());
            thermoTimer.Start();
         }
     }

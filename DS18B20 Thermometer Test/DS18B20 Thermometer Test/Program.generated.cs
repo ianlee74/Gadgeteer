@@ -21,7 +21,7 @@ namespace DS18B20_Thermometer_Test
         public static void Main()
         {
             //Important to initialize the Mainboard first
-            Mainboard = new GHIElectronics.Gadgeteer.FEZHydra();			
+            Mainboard = new GHIElectronics.Gadgeteer.FEZCerberus();			
 
             Program program = new Program();
             program.InitializeModules();
@@ -32,7 +32,7 @@ namespace DS18B20_Thermometer_Test
         private void InitializeModules()
         {   
             // Initialize GTM.Modules and event handlers here.		
-            thermoExtender = new GTM.GHIElectronics.Extender(9);
+            thermoExtender = new GTM.GHIElectronics.Extender(2);
 
         }
     }
