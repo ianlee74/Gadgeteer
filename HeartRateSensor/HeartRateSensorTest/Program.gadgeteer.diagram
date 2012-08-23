@@ -80,11 +80,11 @@
         </socketUseShape>
       </nestedChildShapes>
     </moduleShape>
-    <socketConnector Id="3a89ac7f-b671-4987-b664-9b2425baaa1e" edgePoints="[(6.46877952401138 : 1.985); (2.765 : 1.985); (2.765 : 3.53641732150427)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <socketUseReferencesSocketMoniker Id="3c665600-990d-4710-911a-db53121098a1" />
+    <socketConnector Id="69da7b2e-02fd-40d4-bad4-6f044ac0fdff" edgePoints="[(6.46877952401138 : 1.985); (2.185 : 1.985); (2.185 : 3.53641732150427)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <socketUseReferencesSocketMoniker Id="61699cbf-0113-41b9-841a-c90970f0aa31" />
       <nodes>
         <socketUseShapeMoniker Id="98c0824f-9f5a-4171-a71a-a62bc5572513" />
-        <socketShapeMoniker Id="bb6444b5-0065-4c80-bfdf-059353df83b4" />
+        <socketShapeMoniker Id="751d2222-3dc1-4ec5-9bb1-e1d98ad09cfc" />
       </nodes>
     </socketConnector>
   </nestedChildShapes>

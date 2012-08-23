@@ -11,13 +11,14 @@
 using Gadgeteer;
 using GTM = Gadgeteer.Modules;
 
-namespace HeartRateSensorTest
+namespace TinkrPacMan
 {
     public partial class Program : Gadgeteer.Program
     {
         // GTM.Module definitions
-        Gadgeteer.Modules.GHIElectronics.Extender heartRateExtender;
-        Gadgeteer.Modules.GHIElectronics.Extender ledExtender;
+        Gadgeteer.Modules.GHIElectronics.Display_CP7 display_CP7;
+        Gadgeteer.Modules.GHIElectronics.Joystick joystick;
+        Gadgeteer.Modules.GHIElectronics.SDCard sdCard;
 
         public static void Main()
         {
@@ -33,9 +34,11 @@ namespace HeartRateSensorTest
         private void InitializeModules()
         {   
             // Initialize GTM.Modules and event handlers here.		
-            ledExtender = new GTM.GHIElectronics.Extender(3);
+            display_CP7 = new GTM.GHIElectronics.Display_CP7(10, 11, 12, 5);
 		
-            heartRateExtender = new GTM.GHIElectronics.Extender(9);
+            sdCard = new GTM.GHIElectronics.SDCard(8);
+		
+            joystick = new GTM.GHIElectronics.Joystick(13);
 
         }
     }
