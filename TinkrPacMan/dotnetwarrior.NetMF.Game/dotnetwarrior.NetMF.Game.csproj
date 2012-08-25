@@ -45,11 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SPOT.Graphics" />
-    <Reference Include="Microsoft.SPOT.Native">
-    </Reference>
+    <Reference Include="Microsoft.SPOT.Native" />
     <Reference Include="Microsoft.SPOT.TinyCore" />
-    <Reference Include="Skewworks.Tinkr, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Skewworks.Tinkr.Controls, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Skewworks.Tinkr, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Skewworks.Tinkr.Controls, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dotnetwarrior.NetMF\dotnetwarrior.NetMF.csproj">
