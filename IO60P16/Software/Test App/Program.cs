@@ -4,8 +4,8 @@ using Gadgeteer.Modules.GHIElectronics;
 using Gadgeteer.Modules.GHIElectronics.IO60P16;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
-using NETMFx.LedCube.Effects;
-using NETMFx.LedCube.IO60P16;
+//using NETMFx.LedCube.Effects;
+//using NETMFx.LedCube.IO60P16;
 using GT = Gadgeteer;
 using GTM = Gadgeteer.Modules;
 using OutputPort = Gadgeteer.Modules.GHIElectronics.IO60P16.OutputPort;
@@ -25,16 +25,24 @@ namespace Test_App
         private static OutputPort op12;
         private static OutputPort op15;
         private static PWM pwm;
+        private static PWM pwm2;
         private static InterruptPort ip0;
 
-        private static LedCube3 _ledCube;
+        //private static LedCube3 _ledCube;
 
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
-            io60p16 = new GTM.GHIElectronics.IO60P16.IO60P16Module(2);
+            io60p16 = new GTM.GHIElectronics.IO60P16.IO60P16Module(5);
 
             Debug.Print("Program Started");
+
+            // Test multiple PWMs.
+            pwm = io60p16.CreatePwm(PwmPin.Pwm8, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
+            pwm2 = io60p16.CreatePwm(PwmPin.Pwm9, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
+            pwm.Start();
+            pwm2.Start();
+            return;
 
             // Test PWM.
             //var pwm2 = new Microsoft.SPOT.Hardware.PWM(Cpu.PWMChannel.PWM_7, 8000, 4000, Microsoft.SPOT.Hardware.PWM.ScaleFactor.Nanoseconds, false);
@@ -58,34 +66,34 @@ namespace Test_App
             return;
 
             // Test 3x3x3 LED Cube.
-            _ledCube = new LedCube3(io60p16, 3
-                // Levels
-                , new[] { IOPin.Port2_Pin2, IOPin.Port2_Pin1, IOPin.Port2_Pin0 }
-                // Columns
-                , new[] { IOPin.Port7_Pwm11, IOPin.Port7_Pwm12, IOPin.Port7_Pwm13, IOPin.Port7_Pwm14, IOPin.Port7_Pwm15
-                         ,IOPin.Port6_Pwm0, IOPin.Port7_Pwm10, IOPin.Port7_Pwm9, IOPin.Port7_Pwm8 });
+            //_ledCube = new LedCube3(io60p16, 3
+            //    // Levels
+            //    , new[] { IOPin.Port2_Pin2, IOPin.Port2_Pin1, IOPin.Port2_Pin0 }
+            //    // Columns
+            //    , new[] { IOPin.Port7_Pwm11, IOPin.Port7_Pwm12, IOPin.Port7_Pwm13, IOPin.Port7_Pwm14, IOPin.Port7_Pwm15
+            //             ,IOPin.Port6_Pwm0, IOPin.Port7_Pwm10, IOPin.Port7_Pwm9, IOPin.Port7_Pwm8 });
 
-            var cubeTimer = new GT.Timer(5000);
-            cubeTimer.Tick += timer1 =>
-            {
-                var effects = new CubeEffect[]
-                                                        {
-                                                            new AsciiChar(_ledCube, "HELLO WORLD"),
-                                                            new TallyUp(_ledCube, 100),
-                                                            new TallyDown(_ledCube, 50),
-                                                            new SirenClockwise(_ledCube, 100),
-                                                            new SirenCounterclockwise(_ledCube, 100),
-                                                            new AsciiChar(_ledCube, 100, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
-                                                            new SpiralUp(_ledCube, 100),
-                                                            new SpiralDown(_ledCube, 50),
-                                                            new Randomizer(_ledCube, 20)
-                                                        };
-                foreach (var effect in effects)
-                {
-                    effect.Start();
-                }
-            };
-            cubeTimer.Start();
+            //var cubeTimer = new GT.Timer(5000);
+            //cubeTimer.Tick += timer1 =>
+            //{
+            //    var effects = new CubeEffect[]
+            //                                            {
+            //                                                new AsciiChar(_ledCube, "HELLO WORLD"),
+            //                                                new TallyUp(_ledCube, 100),
+            //                                                new TallyDown(_ledCube, 50),
+            //                                                new SirenClockwise(_ledCube, 100),
+            //                                                new SirenCounterclockwise(_ledCube, 100),
+            //                                                new AsciiChar(_ledCube, 100, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
+            //                                                new SpiralUp(_ledCube, 100),
+            //                                                new SpiralDown(_ledCube, 50),
+            //                                                new Randomizer(_ledCube, 20)
+            //                                            };
+            //    foreach (var effect in effects)
+            //    {
+            //        effect.Start();
+            //    }
+            //};
+            //cubeTimer.Start();
             return;
 
             // Test problem with Port0_Pin0 Dobova was having.
