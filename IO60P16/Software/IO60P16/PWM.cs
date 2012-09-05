@@ -215,7 +215,7 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
 
         private void SetPwm(byte port, byte pin, byte period, byte pulseWidth, PWM.PwmClockSource clock, byte clockDivider = 0)
         {
-            _parentModule.Write(port, pin, false);
+            //_parentModule.Write(port, pin, false);                      // Why was this here???
 
             _parentModule.WriteRegister(0x18, port);                      // Select port
 
@@ -234,7 +234,7 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
             _parentModule.WriteRegister(0x2a, period);                    // set the period (0-256)
             _parentModule.WriteRegister(0x2b, pulseWidth);                // set the pulse width (0-(period-1))
 
-            _parentModule.Write(port, pin, true);
+            //_parentModule.Write(port, pin, true);
         }
 
         public void SetPwm(byte port, byte pin, uint period_ns, uint pulseWidth_ns)

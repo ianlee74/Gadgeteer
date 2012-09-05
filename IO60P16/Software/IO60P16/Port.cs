@@ -75,7 +75,8 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// </summary>
         private void OnParentInterrupt(object sender, InterruptEventArgs args)
         {
-            if (args.Port == PortNumber && args.Pin == PinNumber)
+            if (args.Port != PortNumber || args.Pin != PinNumber) return;
+            if (OnInterrupt != null)
             {
                 OnInterrupt(args.Port, args.Pin, args.Timestamp);
             }

@@ -29,6 +29,26 @@ namespace Test_App
         private static InterruptPort ip0;
 
         //private static LedCube3 _ledCube;
+        // Create a function to replace .Start()
+        private void SetPwm(IO60P16Module _parentModule, byte port, byte pin, byte period, byte pulseWidth, PWM.PwmClockSource clock, byte clockDivider = 0)
+        {
+            _parentModule.WriteRegister(0x18, port);                      // Select port
+
+            var b = _parentModule.ReadRegister(0x1a);
+            b |= (byte)((1 << pin));
+            _parentModule.WriteRegister(0x1a, b);                         // select PWM for port output
+
+            b = _parentModule.ReadRegister(0x1C);
+            b &= (byte)(~(1 << pin));
+            _parentModule.WriteRegister(0x1C, b);                         // Set pin for output.
+
+            _parentModule.WriteRegister(0x28, (byte)(0x08 + pin));        // Select the PWM pin to configure.
+
+            _parentModule.WriteRegister(0x29, (byte)clock);               // Config PWM (select 32kHz clock source)
+            if (clockDivider > 0) _parentModule.WriteRegister(0x2c, clockDivider);     // Set the clock divider (if using 367.6 Hz clock)
+            _parentModule.WriteRegister(0x2a, period);                    // set the period (0-256)
+            _parentModule.WriteRegister(0x2b, pulseWidth);                // set the pulse width (0-(period-1))
+        }
 
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
@@ -37,11 +57,108 @@ namespace Test_App
 
             Debug.Print("Program Started");
 
+
+            // Test interrupts on an IO pin.
+            io60p16.SetDirection(IOPin.Port0_Pin6, PinDirection.Output);
+            io60p16.SetDirection(IOPin.Port7_Pwm15, PinDirection.Input);
+            io60p16.SetInterruptEnable(IOPin.Port7_Pwm15, true);
+            Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));        // prints 255
+            io60p16.Interrupt += (sender, args) => Debug.Print("Port: " + args.Port + "  Pin: " + args.Pin);
+            var timer2 = new GT.Timer(500);
+            timer2.Tick += timer1 =>
+            {
+                io60p16.Write(IOPin.Port0_Pin6, false);
+                Thread.Sleep(100);
+                io60p16.Write(IOPin.Port0_Pin6, true);
+            };
+            timer2.Start();
+            return;
+
+            // Test interrupts on all pins.
+            var op = io60p16.CreateOutputPort(IOPin.Port0_Pin6, true);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin4);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin5);
+            ////io60p16.CreateInterruptPort(IOPin.Port0_Pin6);
+            //io60p16.CreateInterruptPort(IOPin.Port0_Pin7);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin4);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin5);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin6);
+            //io60p16.CreateInterruptPort(IOPin.Port1_Pin7);
+            //io60p16.CreateInterruptPort(IOPin.Port2_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port2_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port2_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port2_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin4);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin5);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin6);
+            //io60p16.CreateInterruptPort(IOPin.Port3_Pin7);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin4);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin5);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin6);
+            //io60p16.CreateInterruptPort(IOPin.Port4_Pin7);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin0);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin1);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin2);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin3);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin4);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin5);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin6);
+            //io60p16.CreateInterruptPort(IOPin.Port5_Pin7);
+            var i = io60p16.CreateInterruptPort(IOPin.Port6_Pwm0);
+            i.OnInterrupt += (data1, data2, time) => Debug.Print("Zap!");
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm1);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm2);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm3);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm4);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm5);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm6);
+            io60p16.CreateInterruptPort(IOPin.Port6_Pwm7);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm8);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm9);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm10);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm11);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm12);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm13);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
+            //io60p16.CreateInterruptPort(IOPin.Port7_Pwm15);
+
+            io60p16.Interrupt += (sender, args) => Debug.Print("Port: " + args.Port + "  Pin: " + args.Pin);
+            //var t2 = new GT.Timer(200);
+            //t2.Tick += timer1 =>{
+            //                        op.Write(false);
+            //                        Thread.Sleep(20);
+            //                        op.Write(true);
+            //                    };
+            //t2.Start();
+            return;
+
             // Test multiple PWMs.
-            pwm = io60p16.CreatePwm(PwmPin.Pwm8, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
-            pwm2 = io60p16.CreatePwm(PwmPin.Pwm9, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
+            pwm = io60p16.CreatePwm(PwmPin.Pwm9, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
+            pwm2 = io60p16.CreatePwm(PwmPin.Pwm10, 20 * 1000 * 1000, 1500 * 1000, PWM.ScaleFactor.Nanoseconds, false);
             pwm.Start();
             pwm2.Start();
+            //pwm.SetPwm(7, 3, 20*1000*1000, 1500*1000);
+
+            // Call these where you were calling .Start()
+            //SetPwm(io60p16, 6, 0, 255, 19, ModulePwm.PwmClockSource.Clock_367Hz6, 7);
+            //SetPwm(io60p16, 6, 1, 255, 19, ModulePwm.PwmClockSource.Clock_367Hz6, 7);
+
             return;
 
             // Test PWM.
@@ -119,25 +236,6 @@ namespace Test_App
             t.Start();
             return;
             */
-
-
-
-            // Test interrupts on an IO pin.
-            io60p16.SetDirection(IOPin.Port2_Pin0, PinDirection.Output);
-            io60p16.SetDirection(IOPin.Port7_Pwm15, PinDirection.Input);
-            io60p16.SetInterruptEnable(IOPin.Port7_Pwm15, true);
-            Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));        // prints 255
-            io60p16.Interrupt += (sender, args) => Debug.Print("Port: " + args.Port + "  Pin: " + args.Pin);
-            var timer2 = new GT.Timer(200);
-            timer2.Tick += timer1 =>
-                               {
-                                   io60p16.Write(IOPin.Port2_Pin0, false);
-                                   Thread.Sleep(20);
-                                   io60p16.Write(IOPin.Port2_Pin0, true);
-                               };
-            timer2.Start();            
-            return;
-
 
             // Test reading the value of an individual pin.
             io60p16.SetDirection(IOPin.Port7_Pwm8, PinDirection.Output);

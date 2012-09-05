@@ -78,13 +78,6 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
             // Start receiving interrupts.
             _interrupt = new InterruptInput(socket, Socket.Pin.Three, GlitchFilterMode.Off, Interfaces.ResistorMode.Disabled, InterruptMode.RisingEdge, null);
             _interrupt.Interrupt += OnInterrupt;
-
-            // Loop through the enabled ports and find which pin(s) threw the event.
-            for (byte port = 0; port < 8; port++)
-            {
-                // Get the interrupt status of all pins on the port.
-                var intMask = ReadRegister((byte)(INTERRUPT_STATUS_PORT_0_REGISTER + port));
-            }
         }
 
         /// <summary>
