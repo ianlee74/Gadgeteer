@@ -140,17 +140,17 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// <param name="value">The value to write.</param>
         public void WriteRegister(byte register, byte value)
         {
+            byte[] data = new[] { register, value };
             lock (_lock)
             {
-                byte[] data = new[] { register, value };
 #if HARDWARE_I2C
                 _i2c.Write(data, 1000);
 #else
-#if USE_DAISYLINK_SOFTWARE_I2C
+  #if USE_DAISYLINK_SOFTWARE_I2C
                 _i2c.Write(DEV_ADDR, data);
-#else
+  #else
                 _i2cDevice.Write(data, 0, data.Length);
-#endif
+  #endif
 #endif
             }
         }
@@ -502,11 +502,11 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// <param name="enable">Enable (true) or disable (false)?</param>
         public void SetInterruptEnable(IOPin pin, bool enable)
         {
+            var pinNum = GetPinNumber(pin);
+            var port = GetPortNumber(pin);
+
             lock (_lock)
             {
-                var pinNum = GetPinNumber(pin);
-                var port = GetPortNumber(pin);
-
                 WriteRegister(PORT_SELECT_REGISTER, port); // Select port
                 var b = ReadRegister(INTERRUPT_MASK_PORT_REGISTER); // Read the current values of the port.
 
