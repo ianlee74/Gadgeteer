@@ -89,10 +89,11 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
             if (Interrupt == null) return;
 
             // Loop through the enabled ports and find which pin(s) threw the event.
+            var status = ReadAllInterruptStatusRegisters();
             for (byte port = 0; port < 8; port++)
             {
                 // Get the interrupt status of all pins on the port.
-                var intMask = ReadRegister((byte)(INTERRUPT_STATUS_PORT_0_REGISTER + port));
+                var intMask = status[port];
                 if (intMask == 0) continue;         // This port didn't trigger the event.  Move on...
 
                 // Raise events for each of the pins that triggered the interrupt.
@@ -160,43 +161,62 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// <param name="register">The register to read from.</param>
         /// <returns>The value in the register.</returns>
         public byte ReadRegister(byte register)
-        {
-            lock (_lock)
-            {
+        {            
                 var writeBuffer = new byte[] { register };
                 var data = new byte[1];
+
+                lock (_lock)
+                {
 #if HARDWARE_I2C
-                _i2c.Write(writeBuffer, 20);
-                _i2c.Read(data, 20);
+                    _i2c.Write(writeBuffer, 20);
+                    _i2c.Read(data, 20);
 #else
-#if USE_DAISYLINK_SOFTWARE_I2C
+  #if USE_DAISYLINK_SOFTWARE_I2C
                 // Bring the pointer to the needed address
                 _i2c.Write(DEV_ADDR, new byte[] { register });
                 // Read the address
                 _i2c.Read(DEV_ADDR, data);
-#else
+  #else
                 // Bring the pointer to the needed address
                 _i2cDevice.Write(writeBuffer, 0, 1);
                 // Read the address
-                // HACK:  Read multiple times until we get a repeat to help ensure we're getting the correct value.
                 _i2cDevice.Read(data, 0, data.Length);
-                var r1 = data[0];
-                _i2cDevice.Write(writeBuffer, 0, 1);
-                _i2cDevice.Read(data, 0, data.Length);
-                if (r1 != data[0]) 
-                {
-                    var r2 = data[0];
-                    _i2cDevice.Write(writeBuffer, 0, 1);
-                    _i2cDevice.Read(data, 0, data.Length);
-                    if (r2 == r1) return r1;
-                    return r2 == data[0] ? r2 : r1;
+  #endif
+#endif
                 }
-#endif
-#endif
-                return data[0];
-            }
+            return data[0];
         }
 
+        /// <summary>
+        /// Read in one shot all status registers (10h..17h)
+        /// </summary>
+        /// <returns>an array of 8 bytes representing the 8 registers values </returns>
+        public byte[] ReadAllInterruptStatusRegisters()
+        {
+            var writeBuffer = new byte[] { INTERRUPT_STATUS_PORT_0_REGISTER };
+            var data = new byte[8]; // read 8 registers in sequence
+
+            lock (_lock)
+                {
+#if HARDWARE_I2C
+                _i2c.Write(writeBuffer, 20);
+                _i2c.Read(data, 20);
+#else
+  #if USE_DAISYLINK_SOFTWARE_I2C
+                // Bring the pointer to the needed address
+                _i2c.Write(DEV_ADDR, new byte[] { register });
+                // Read the address
+                _i2c.Read(DEV_ADDR, data);
+  #else
+                // Bring the pointer to the needed address
+                _i2cDevice.Write(writeBuffer, 0, 1);
+                // Read the address
+                _i2cDevice.Read(data, 0, data.Length);
+  #endif
+#endif
+                return data;
+            }
+        }
         /// <summary>
         /// Reads the value of a port.
         /// </summary>

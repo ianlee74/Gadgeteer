@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using Gadgeteer.Modules.GHIElectronics;
+using Gadgeteer;
 using Gadgeteer.Modules.GHIElectronics.IO60P16;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -53,10 +53,26 @@ namespace Test_App
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
-            io60p16 = new GTM.GHIElectronics.IO60P16.IO60P16Module(5);
+            io60p16 = new GTM.GHIElectronics.IO60P16.IO60P16Module(7);
 
             Debug.Print("Program Started");
 
+            Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));
+            var op1 = io60p16.CreateOutputPort(IOPin.Port6_Pwm6, false);
+            var ip = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
+            //var ip2 = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
+            ip.OnInterrupt += (data1, data2, time) => Debug.Print("Exterminate!");
+            Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));
+            var t = new GT.Timer(1000);
+            t.Tick += tmr =>
+            {
+                Debug.Print("Tick.");
+                op1.Write(true);
+                Thread.Sleep(100);
+                op1.Write(false);
+            };
+            t.Start();
+            return;
 
             // Test interrupts on an IO pin.
             io60p16.SetDirection(IOPin.Port0_Pin6, PinDirection.Output);
@@ -67,6 +83,7 @@ namespace Test_App
             var timer2 = new GT.Timer(500);
             timer2.Tick += timer1 =>
             {
+                Debug.Print("Tick.");
                 io60p16.Write(IOPin.Port0_Pin6, false);
                 Thread.Sleep(100);
                 io60p16.Write(IOPin.Port0_Pin6, true);
