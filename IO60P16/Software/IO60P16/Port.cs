@@ -105,9 +105,6 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// </summary>
         public virtual void Dispose()
         {
-            // Make sure the interrupt handler is disassociated with the parent.
-            // Not sure how necessary this really is...
-            ParentModule.Interrupt -= OnParentInterrupt;
             DisableInterrupt();         // Disable interrupts for this pin on the module.
         }
 

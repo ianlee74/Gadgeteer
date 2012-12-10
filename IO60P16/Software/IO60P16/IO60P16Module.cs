@@ -77,7 +77,21 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
 
             // Start receiving interrupts.
             _interrupt = new InterruptInput(socket, Socket.Pin.Three, GlitchFilterMode.Off, Interfaces.ResistorMode.Disabled, InterruptMode.RisingEdge, null);
-            _interrupt.Interrupt += OnInterrupt;
+            //_interrupt.Interrupt += OnInterrupt;
+
+            //try polling...
+            //var intPoller = new Thread(CheckForInterrupt);
+            //intPoller.Start();
+        }
+
+        private void CheckForInterrupt()
+        {
+            while (true)
+            {
+                //Debug.Print("Polling...");
+                OnInterrupt(null, false);
+                Thread.Sleep(20);
+            }
         }
 
         /// <summary>
@@ -162,14 +176,14 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
         /// <returns>The value in the register.</returns>
         public byte ReadRegister(byte register)
         {            
-                var writeBuffer = new byte[] { register };
-                var data = new byte[1];
+            var writeBuffer = new byte[] { register };
+            var data = new byte[1];
 
-                lock (_lock)
-                {
+            lock (_lock)
+            {
 #if HARDWARE_I2C
-                    _i2c.Write(writeBuffer, 20);
-                    _i2c.Read(data, 20);
+                _i2c.Write(writeBuffer, 20);
+                _i2c.Read(data, 20);
 #else
   #if USE_DAISYLINK_SOFTWARE_I2C
                 // Bring the pointer to the needed address
@@ -179,6 +193,7 @@ namespace Gadgeteer.Modules.GHIElectronics.IO60P16
   #else
                 // Bring the pointer to the needed address
                 _i2cDevice.Write(writeBuffer, 0, 1);
+
                 // Read the address
                 _i2cDevice.Read(data, 0, data.Length);
   #endif

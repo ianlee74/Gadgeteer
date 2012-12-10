@@ -50,6 +50,25 @@ namespace Test_App
             _parentModule.WriteRegister(0x2b, pulseWidth);                // set the pulse width (0-(period-1))
         }
 
+        void BareMetalTest()
+        {
+            // 1.  Read current status of interrupt enable register.
+            io60p16.WriteRegister(0x18, 7);                 // Select port
+            byte intStatus = io60p16.ReadRegister(0x19);
+            Debug.Print("InterruptEnable:  " + intStatus);
+            // 2.  Enable interrupt on port #7 pin #14.
+            io60p16.WriteRegister(0x18, 7);                 // Select port
+            io60p16.WriteRegister(0x19, 191);               // Set interrupt enable bit.
+            // 3.  Keep reading values...
+            while(true)
+            {
+                io60p16.WriteRegister(0x18, 7);                 // Select port
+                intStatus = io60p16.ReadRegister(0x19);
+                Debug.Print("InterruptEnable:  " + intStatus);
+                Thread.Sleep(500);
+            };
+        }
+
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
@@ -57,21 +76,44 @@ namespace Test_App
 
             Debug.Print("Program Started");
 
+            // Bare metal test.
+            var t2 = new Thread(BareMetalTest);
+            t2.Start();
+            return;
+
+/*
+            byte intStatus;
+            ip0 = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
+            var t2 = new GT.Timer(1000);
+            t2.Tick += timer =>
+                           {
+                               io60p16.WriteRegister(0x18, 7); // Select port
+                               intStatus = io60p16.ReadRegister(0x19);
+                               Debug.Print("InterruptEnable:  " + intStatus);
+                           };
+            t2.Start();
+            return;
+
             Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));
-            var op1 = io60p16.CreateOutputPort(IOPin.Port6_Pwm6, false);
-            var ip = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
-            //var ip2 = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
-            ip.OnInterrupt += (data1, data2, time) => Debug.Print("Exterminate!");
+            op12 = io60p16.CreateOutputPort(IOPin.Port6_Pwm6, false);
+            ip0 = io60p16.CreateInterruptPort(IOPin.Port7_Pwm14);
+            ip0.OnInterrupt += (data1, data2, time) => Debug.Print("Exterminate!");
             Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));
+            //var t = new Thread(Test_Thread);
+            //t.Start();
+            op12.Write(true);
+            ip0.ClearInterrupt();
+
             var t = new GT.Timer(1000);
             t.Tick += tmr =>
             {
+                //ip0.ClearInterrupt();
                 Debug.Print("Tick.");
-                op1.Write(true);
-                Thread.Sleep(100);
-                op1.Write(false);
+                op12.Write(true);
+                Thread.Sleep(200);
+                op12.Write(false);
             };
-            t.Start();
+            //t.Start();
             return;
 
             // Test interrupts on an IO pin.
@@ -244,7 +286,6 @@ namespace Test_App
             timer3.Start();
             return;
 
-            /*
             ip0 = io60p16.CreateInterruptPort(IOPin.Port0_Pin0);
             ip0.OnInterrupt += (data1, data2, time) => { Debug.Print("P0P0 Hello!"); };
             op12 = io60p16.CreateOutputPort(IOPin.Port7_Pwm8, false);
@@ -252,7 +293,6 @@ namespace Test_App
             t.Tick += timer1 => op12.Write(!op12.Read());
             t.Start();
             return;
-            */
 
             // Test reading the value of an individual pin.
             io60p16.SetDirection(IOPin.Port7_Pwm8, PinDirection.Output);
@@ -314,8 +354,8 @@ namespace Test_App
                                     Debug.Print("Set: 4 \tRead: " + io60p16.Read(7).ToString());
                                 };
             blinker.Start();
+            return;
 
-/*
             var op = new OutputPort[8];
             for (var n = 0; n < 8; n++)
             {
@@ -340,7 +380,7 @@ namespace Test_App
 //            joystick.JoystickPressed += new Joystick.JoystickEventHandler(joystick_JoystickPressed);
             const byte port = 7;
             const byte pin = 0;
-*/
+
 
 
             //io60p16.SetPwm(port, pin, 692 * 1000, 20000);
@@ -369,7 +409,26 @@ namespace Test_App
             //    io60p16.SetPwm(port, pin, period, 64, PwmClockSource.Clock_32kHz);
             //    Thread.Sleep(1000);
             //}
+*/
+        }
 
+        private void Test_Thread()
+        {
+            //lcd.Clear();
+            //Thread.Sleep(20);
+            //lcd.SetCursor(0, 0);
+            //lcd.PrintString("Program Started");
+            Thread.Sleep(100);
+            while (true)
+            {
+                Debug.Print("InterruptEnable:  " + io60p16.GetInterruptsEnabled(7));
+
+                ip0.ClearInterrupt(); //// <---------------------------with this line the INT works fine !!!
+                op12.Write(true);
+                Thread.Sleep(200);
+                op12.Write(false);
+                Thread.Sleep(500);
+            }
         }
 
         //void joystick_JoystickPressed(Joystick sender, Joystick.JoystickState state)
